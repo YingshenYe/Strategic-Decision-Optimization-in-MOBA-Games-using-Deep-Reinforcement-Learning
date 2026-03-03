@@ -41,6 +41,34 @@ This solution targets the **$185 billion global gaming industry**, with applicat
 - Player training platforms that provide data driven strategic recommendations
 - Game balancing and design tools informed by large scale strategic evaluation
 - Esports analytics and coaching systems focused on macro decision patterns
+
+### 1.7 Learned Strategic Policy Insights (Sample Policy Outputs)
+
+The table below presents a representative sample of high-value state-action pairs learned by the reinforcement learning agent.
+
+These examples are selected from over 500 observed game states and illustrate strategically coherent macro decisions. They are not exhaustive results, but sample outputs demonstrating learned policy patterns.
+
+| Economy State     | XP State        | Dragon State  | Vision State | Fight State    | Recommended Action | Q Value |
+|-------------------|----------------|---------------|--------------|----------------|-------------------|--------|
+| Econ_Crushing     | XP_Dominating  | DragonAhead  | HighVision  | WinningFight  | Group_Attack      | 5.27   |
+| Econ_Ahead        | XP_Dominating  | DragonAhead  | LowVision   | EvenFight     | Baron_Control     | 4.89   |
+| Econ_Even         | XP_Even        | DragonAhead  | LowVision   | EvenFight     | Dragon_Control    | 4.58   |
+| Econ_Behind       | XP_Behind      | DragonAhead  | MedVision   | LosingFight   | Baron_Control     | 4.07   |
+| Econ_Even         | XP_Even        | DragonEven   | HighVision  | WinningFight  | Group_Attack      | 4.18   |
+| Econ_Crushing     | XP_Dominating  | DragonBehind | MedVision   | WinningFight  | Group_Attack      | 4.99   |
+
+---
+
+Interpretation:
+
+- When holding overwhelming economic and experience advantage, the agent prioritizes coordinated group attacks to accelerate game termination.
+- When ahead with dragon stacking advantage, Baron control is selected to amplify map pressure.
+- When economy is even but dragon lead exists, the agent reinforces objective compounding.
+- When slightly behind, Baron control appears as a controlled comeback mechanism.
+- Vision dominance combined with fight advantage leads to coordinated aggression.
+- The agent correctly prioritizes power spikes over passive scaling when holding a strong economy.
+
+These results demonstrate that the Deep Reinforcement Learning agent learns macro strategies consistent with professional competitive MOBA gameplay rather than random or purely reactive behaviors.
 ## **2. Abstract**
 
 **Why Important:** Early game macro decisions strongly affect MOBA win rates. These decisions are hard to model because game states are high dimensional and rewards are noisy. Using real match data helps create more reliable and interpretable strategy models.
