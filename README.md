@@ -1,5 +1,14 @@
 # Strategic-Decision-Optimization-in-MOBA-Games-using-Deep-Reinforcement-Learning
+## 
+This project focuses on using Deep Reinforcement Learning to optimize strategic decisions in MOBA games like League of Legends.
 
+We address challenges such as complex game states, limited human attention, and inflexible rule-based bots by building a Deep Q Network (DQN) that learns from data instead of relying on handcrafted rules.
+
+Using a Kaggle dataset of ~10,000 high-rank matches with 40 gameplay features, the model evaluates game states (economy, vision, objectives, etc.) and recommends macro-level strategies.
+
+Compared to traditional Q-learning, the DQN is expected to significantly improve reward performance, reduce training loss, and generate stable decisions across hundreds of game scenarios.
+
+This work has applications in AI game agents, player coaching tools, and esports analytics.
 ## **1. Project Proposal**
 
 ### 1.1 Project Topic
